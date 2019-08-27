@@ -28,7 +28,7 @@ Commentors:
     <%= f.collection_select :user_id, User.all, :id, :username %>
   </p>
 
-  <%= f.fields_for :user, User.new do |user_fields| %>
+  <%= f.fields_for :user_attributes, User.new do |user_fields| %>
     <%= user_fields.label :username %>
     <%= user_fields.text_field :username %>
   <% end %>
